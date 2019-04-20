@@ -1,0 +1,74 @@
+<html>
+<header>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/solid.css"  crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/fontawesome.css" crossorigin="anonymous">
+<script src="inlinetable.min.js"></script>
+</header>
+<body>
+	<div id="inlineTable"></div>
+	<script>
+	$( document ).ready(function() {
+		$("#inlineTable").inlineTable({
+			theme: '',
+			language: 'en-US',
+			tabHeader: [
+			{
+				columnName: 'ColunaA',
+				columnTitle: 'Coluna A',
+				type: 'text',
+				mandatory: true,
+				databaseKey: true
+			},{
+				columnName: 'ColunaB',
+				columnTitle: 'Coluna B',
+				type: 'text',
+				mandatory: true,
+				databaseKey: true
+			},{
+				columnName: 'ColunaC',
+				columnTitle: 'Coluna C',
+				type: 'select',
+				mandatory: true,
+				databaseKey: false,
+				selectData: [{'value':'1','description':'texto 1', 'default':'S'},{'value':'2','description':'texto 2', 'default':'N'},{'value':'3','description':'texto 3', 'default':'N'},{'value':'4','description':'texto 4', 'default':'N'},{'value':'5','description':'texto 5', 'default':'N'}]
+			},{
+				columnName: 'ColunaD',
+				columnTitle: 'Coluna D',
+				type: 'text',
+				databaseKey: false,
+				mandatory: true
+			},{
+				columnName: 'ColunaE',
+				columnTitle: 'Coluna E',
+				type: 'text',
+				databaseKey: false,
+				mandatory: true
+			},{
+				columnName: 'ColunaF',
+				columnTitle: 'Coluna F',
+				type: 'text',
+				mandatory: true,
+				databaseKey: false
+			}			
+			],
+			data:[
+				{'ColunaA':'valor a','ColunaB':'valor b','ColunaC':'valor c','ColunaD':'valor d','ColunaE':'valor e','ColunaF':'valor f'},
+				{'ColunaA':'valor h','ColunaB':'valor i','ColunaC':'valor j','ColunaD':'valor k','ColunaE':'valor l','ColunaF':'valor m'}
+			],
+			onDelete: function(retDel){
+				console.log(retDel);
+			},
+			onEdit: function(retEdit){
+				console.log(retEdit);
+			},
+			onInsert: function(retEdit){
+				console.log(retEdit);
+			}
+		});
+	});
+	</script>
+	</body>
+</html>

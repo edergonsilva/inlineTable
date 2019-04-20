@@ -25,12 +25,13 @@ Depende das bibliotecas FontAwsome, Bootstrap e Jquery:
 ```
 
 ### Chamada
-HTML
+
+#### HTML
 ```html
 <div id="inlinetable"></div>
 ```
 
-### Javascript
+#### Javascript
 ```javascript
   $( document ).ready(function() {
     $("#inlinetable").inlineTable({

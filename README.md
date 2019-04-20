@@ -1,5 +1,5 @@
 # inlineTable
-Tabela com edição em lina - Grid
+Tabela com edição em linha - Grid
 
 # Início
 Depende das bibliotecas FontAwsome, Bootstrap e Jquery:
